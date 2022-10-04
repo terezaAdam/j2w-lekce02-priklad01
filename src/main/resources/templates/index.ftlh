@@ -1,3 +1,4 @@
+[#ftl]
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -7,15 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
-<div>
     <div>
-        <img class="kostka" src="/images/kostka-1.svg" alt=""/>
+        <img class="kostka" src="static/images/kostka-1{$kostka1}.svg" alt=""/>
+        <img class="kostka" src="static/images/kostka-2{$kostka2}.svg" alt=""/>
     </div>
-    <div>Padlo číslo: <span>1</span></div>
-</div>
+    <div>Padlo číslo: <span>${hozeneCislo}</span>
+    </div>
 </body>
 </html>
