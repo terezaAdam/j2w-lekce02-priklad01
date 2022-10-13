@@ -8,26 +8,25 @@ import org.springframework.boot.Banner;
 import java.util.Random;
 
 @Controller
-
-
 public class HodKostkouController{
     private Random random = new Random();
 
-    @GetMapping("kostka/")
+    @GetMapping("/")
     public ModelAndView hodKostkou(){
         int hozeneCislo = random.nextInt(6)+1;
-        ModelAndView modelAndView = new ModelAndView("cislo");
+        ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("cislo", hozeneCislo);
         modelAndView.addObject("kostka1", hozeneCislo);
-        modelAndView.addObject("kostka2", hozeneCislo);
+        modelAndView.addObject("kostka2", 0);
 
         return modelAndView;
 
     }
 
-    @GetMapping("dvanactisten/")
+    @GetMapping("/dvanactisten")
+
     public ModelAndView dvanacti(){
-        int hozeneCislo = random.nextInt(6)+1;
+        int hozeneCislo = random.nextInt(12)+1;
         ModelAndView modelAndView = new ModelAndView("dvanactisten");
         modelAndView.addObject("cislo", hozeneCislo);
         modelAndView.addObject("kostka1", hozeneCislo);
